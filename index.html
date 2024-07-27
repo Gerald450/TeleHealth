@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Telehealth Appointment System</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        /* Custom Styles */
+        #logo {
+            font-size: 2.5em;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        #logo a {
+            text-decoration: none;
+            color: #fff;
+        }
+        #banner .content {
+            text-align: center;
+            padding: 3em 0;
+        }
+        #banner .content h2 {
+            font-size: 3em;
+            color: #fff;
+        }
+        #banner .content p {
+            font-size: 1.5em;
+            color: #fff;
+        }
+        .spotlight img {
+            object-fit: cover;
+            height: 100%;
+        }
+        .actions .button {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        footer .icons a {
+            color: #28a745;
+        }
+        .icon-major {
+            font-size: 3em;
+            color: #28a745;
+        }
+    </style>
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload landing">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1 id="logo"><a href="index.html">Telehealth</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#schedule">Schedule Appointment</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="button primary">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner" style="background-image: url('images/telehealth_banner.jpg'); background-size: cover;">
+            <div class="content">
+                <header>
+                    <h2>Your Health, Our Priority</h2>
+                    <p>Schedule your appointment easily and consult with our experts from the comfort of your home.</p>
+                </header>
+                <span class="image"><img src="images/doctor_online.jpg" alt="Doctor Online" /></span>
+            </div>
+            <a href="#one" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- Appointment Scheduling -->
+        <section id="schedule" class="spotlight style1 bottom">
+            <span class="image fit main"><img src="images/appointment_schedule.jpg" alt="Appointment Schedule" /></span>
+            <div class="content">
+                <div class="container">
+                    <header>
+                        <h2>Schedule Your Appointment</h2>
+                        <p>Fill out the form below to book your telehealth appointment.</p>
+                    </header>
+                    <form method="post" action="#">
+                        <div class="row gtr-uniform gtr-50">
+                            <div class="col-6 col-12-xsmall">
+                                <input type="text" name="name" id="name" placeholder="Your Name" required />
+                            </div>
+                            <div class="col-6 col-12-xsmall">
+                                <input type="email" name="email" id="email" placeholder="Your Email" required />
+                            </div>
+                            <div class="col-6 col-12-xsmall">
+                                <input type="date" name="date" id="date" placeholder="Appointment Date" required />
+                            </div>
+                            <div class="col-6 col-12-xsmall">
+                                <input type="time" name="time" id="time" placeholder="Appointment Time" required />
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" id="message" placeholder="Additional Information" rows="4"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <ul class="actions special">
+                                    <li><input type="submit" value="Book Appointment" class="button primary" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <a href="#services" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="spotlight style2 right">
+            <span class="image fit main"><img src="images/telehealth_services.jpg" alt="Telehealth Services" /></span>
+            <div class="content">
+                <header>
+                    <h2>Our Services</h2>
+                    <p>We offer a range of telehealth services to cater to your needs.</p>
+                </header>
+                <p>From general consultations to specialist advice, our telehealth platform connects you with healthcare professionals in various fields.</p>
+                <ul class="actions">
+                    <li><a href="#" class="button">Learn More</a></li>
+                </ul>
+            </div>
+            <a href="#contact" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="spotlight style3 left">
+            <span class="image fit main bottom"><img src="images/contact_us.jpg" alt="Contact Us" /></span>
+            <div class="content">
+                <header>
+                    <h2>Contact Us</h2>
+                    <p>Have questions or need assistance? Get in touch with us.</p>
+                </header>
+                <form method="post" action="#">
+                    <div class="row gtr-uniform gtr-50">
+                        <div class="col-6 col-12-xsmall">
+                            <input type="text" name="name" id="name" placeholder="Your Name" required />
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            <input type="email" name="email" id="email" placeholder="Your Email" required />
+                        </div>
+                        <div class="col-12">
+                            <textarea name="message" id="message" placeholder="Your Message" rows="4"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <ul class="actions special">
+                                <li><input type="submit" value="Send Message" class="button primary" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <a href="#footer" class="goto-next scrolly">Next</a>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Telehealth. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

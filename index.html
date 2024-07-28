@@ -13,9 +13,24 @@
             color: #fff;
             text-transform: uppercase;
         }
+        #logo {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #454040; /* Sky blue color */
+            border-radius: 15px; /* Smooth edges */
+            font-family: 'Arial', sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(29, 83, 199);
+            text-decoration: none;
+        }
+        #logo a {
+            color: white;
+            text-decoration: none;
+        }
         #logo a {
             text-decoration: none;
-            color: #fff;
+            color: #fefdfd;
         }
         #banner .content {
             text-align: center;
@@ -23,11 +38,11 @@
         }
         #banner .content h2 {
             font-size: 3em;
-            color: #fff;
+            color: #f8f6f6;
         }
         #banner .content p {
             font-size: 1.5em;
-            color: #fff;
+            color: #eef4edfd;
         }
         .spotlight img {
             object-fit: cover;
@@ -60,33 +75,33 @@
                     <li><a href="#schedule">Schedule Appointment</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#" class="button primary">Sign Up</a></li>
+                    
                 </ul>
             </nav>
         </header>
 
         <!-- Banner -->
-        <section id="banner" style="background-image: url('images/telehealth_banner.jpg'); background-size: cover;">
+        <section id="banner" style="background-image: url('https://t3.ftcdn.net/jpg/02/06/42/90/360_F_206429067_kAglBmtNQndcB0fZK6KBJCpQkcL1O3ry.jpg'); background-size: cover;">
             <div class="content">
                 <header>
                     <h2>Your Health, Our Priority</h2>
                     <p>Schedule your appointment easily and consult with our experts from the comfort of your home.</p>
                 </header>
-                <span class="image"><img src="images/doctor_online.jpg" alt="Doctor Online" /></span>
+                <span class="image"><img src="images/Default_Design_a_logo_for_a_website_called_Telehealth_a_modern_3.jpg" alt="Doctor Online" /></span>
             </div>
             <a href="#one" class="goto-next scrolly">Next</a>
         </section>
 
         <!-- Appointment Scheduling -->
         <section id="schedule" class="spotlight style1 bottom">
-            <span class="image fit main"><img src="images/appointment_schedule.jpg" alt="Appointment Schedule" /></span>
+            <span class="image fit main"><img src="https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_22649_1654681486583551.jpg" alt="Appointment Schedule" /></span>
             <div class="content">
                 <div class="container">
                     <header>
                         <h2>Schedule Your Appointment</h2>
                         <p>Fill out the form below to book your telehealth appointment.</p>
                     </header>
-                    <form method="post" action="#">
+                    <form id="appointment-form" method="post" action="#">
                         <div class="row gtr-uniform gtr-50">
                             <div class="col-6 col-12-xsmall">
                                 <input type="text" name="name" id="name" placeholder="Your Name" required />
@@ -99,6 +114,9 @@
                             </div>
                             <div class="col-6 col-12-xsmall">
                                 <input type="time" name="time" id="time" placeholder="Appointment Time" required />
+                            </div>
+                            <div class="col-12">
+                                <textarea name="location" id="location" placeholder="Your Location" rows="2"></textarea>
                             </div>
                             <div class="col-12">
                                 <textarea name="message" id="message" placeholder="Additional Information" rows="4"></textarea>
@@ -114,10 +132,28 @@
             </div>
             <a href="#services" class="goto-next scrolly">Next</a>
         </section>
+        
+        <script>
+        document.getElementById('appointment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var location = document.getElementById('location').value;
+            
+            // Use Google Maps Geocoding API to get latitude and longitude
+            fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=https://api.serpwow.com/search?api_key=BEA945F1B6C443E5B27A5DA9B5E0A7AA&q=pizza&engine=google&location=Little+Rock-Pine+Bluff%2CAR%2CArkansas%2CUnited+States&google_domain=google.com&gl=us&hl=en`)
+                .then(response => response.json())
+                .then(data => {
+                    var coords = data.results[0].geometry.location;
+                    console.log(`Latitude: ${coords.lat}, Longitude: ${coords.lng}`);
+                    // You can now use the latitude and longitude to find the nearest doctor or any other functionality
+                })
+                .catch(error => console.error('Error:', error));
+        });
+        </script>
+        
 
         <!-- Services -->
         <section id="services" class="spotlight style2 right">
-            <span class="image fit main"><img src="images/telehealth_services.jpg" alt="Telehealth Services" /></span>
+            <span class="image fit main"><img src="https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2021/10/shutterstock_1673968429.jpg" alt="Telehealth Services" /></span>
             <div class="content">
                 <header>
                     <h2>Our Services</h2>
@@ -133,7 +169,7 @@
 
         <!-- Contact -->
         <section id="contact" class="spotlight style3 left">
-            <span class="image fit main bottom"><img src="images/contact_us.jpg" alt="Contact Us" /></span>
+            <span class="image fit main bottom"><img src="https://www.chestercountyhospital.org/-/media/images/chestercounty/blog/2022/february/220208innovators.ashx?h=370&w=600&la=en" alt="Contact Us" /></span>
             <div class="content">
                 <header>
                     <h2>Contact Us</h2>
@@ -164,15 +200,15 @@
         <!-- Footer -->
         <footer id="footer">
             <ul class="icons">
-                <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://x.com/GeraldShimo" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
                 <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-                <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://www.linkedin.com/in/gerald-shimo-949b3a239/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
                 <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
                 <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
                 <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
             </ul>
             <ul class="copyright">
-                <li>&copy; Telehealth. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>&copy; Telehealth. All rights reserved.</li><li><a href="http://html5up.net">Service 24/7</a></li>
             </ul>
         </footer>
 
